@@ -11,10 +11,20 @@ export default () => ({
 
         this.clear();
 
+        this.$dispatch("calculated", {
+            expression: this.$refs.expression.value,
+            result: response,
+        });
+
         this.$refs.expression.value = response;
     },
 
     clear() {
         this.$store.app.validationErrors.expression = null;
+    },
+
+    setInput() {
+        this.$el.value = this.$event.detail;
+        this.$el.focus();
     },
 });
