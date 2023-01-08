@@ -2,6 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: 'Cousine';
+  font-weight: 400;
+  font-style: normal;
+  src: local('Cousine'), url(../fonts/Cousine-Regular.woff2) format('woff2'), url(../fonts/Cousine-Regular.woff) format('woff'), url(../fonts/Cousine-Regular.ttf) format('ttf');
+}
+
+@font-face {
+  font-family: 'Cousine';
+  font-weight: 700;
+  font-style: normal;
+  src: local('Cousine'), url(../fonts/Cousine-Bold.woff2) format('woff2'), url(../fonts/Cousine-Bold.woff) format('woff'), url(../fonts/Cousine-Bold.ttf) format('ttf');
+}
+
 [x-cloak] {
     display: none;
 }
