@@ -11,7 +11,7 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 
-<body class="antialiased min-h-screen flex justify-center items-center">
+<body class="flex items-center justify-center min-h-screen antialiased bg-gradient-to-br from-blue-200 via-blue-100 to-blue-300">
     <div>
         @yield('content')
         @include('partials.flash')

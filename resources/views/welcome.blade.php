@@ -5,7 +5,7 @@
 @section('content')
     <div class="w-80 h-[80vh]">
         <h1 class="mb-3 text-3xl font-bold text-center">Simple calculator</h1>
-        <div class="flex flex-col bg-blue-300 rounded-lg mb-5" x-data="calculator"
+        <div class="flex flex-col mb-5 bg-blue-300 rounded-lg" x-data="calculator"
             @keyup.escape.window="$refs.expression.value = ''">
             <form class="flex flex-col gap-2 px-6 text-black py-7" action="{{ route('calculate') }}" method="POST"
                 x-on:submit.prevent="calculate(event)">
@@ -23,7 +23,7 @@
                     type="submit" value="Calculate">
             </form>
         </div>
-        <ul class="px-6 py-7 border rounded-lg max-h-[45vh] overflow-y-auto" x-on:calculated.window="calculations.unshift($event.detail)" x-on:click="getValue"
+        <ul class="px-6 py-7 border border-black rounded-lg max-h-[45vh] overflow-y-auto" x-on:calculated.window="calculations.unshift($event.detail)" x-on:click="getValue"
         x-data="{
             calculations: [],
             getValue(event){
